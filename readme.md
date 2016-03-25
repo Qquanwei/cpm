@@ -26,5 +26,14 @@
     1 directory, 2 files
 
 ```
+在使用时可以在主文件中加入 `#include "cinclude/clist.h"` 进行引用。
 
 
+## options
+
+0.0.1版本支持的options:
+
+* `install` 如果后面有文件则搜索指定`c`库进行安装，并将其记录到`.cpm.config`文件中,如果没有文件则默认安装 .cpm.config 中配置的`c`库 
+* `update` 不需要参数，更新本地`cpmlist`仓库
+* `search` 需要一个参数，搜索含有该参数的软件库名称
+* `remove` 移除一个`c`库
