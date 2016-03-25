@@ -10,3 +10,5 @@
 * chttp
 * cmap
 
+## 软件库列表
+软件库列表新建为 `git@github.com:Qquanwei/cpmlist.git` ,可通过Push新列表更新库源。需要使用`git`功能,本地的源仓库在`~/.cpm/cpmlist`中，每次执行`install`时通过执行--判断是否存在本地`cpmlist`仓库--查找`c`库地址--下载--这一流程进行`c`库的安装。执行`update`时更新本地源。
