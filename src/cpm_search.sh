@@ -4,7 +4,7 @@
 
 function print_usag_and_exit(){
   echo '参数错误'
-  echo '  $1 hellowold'
+  echo '  $1 hellowrold'
 }
 
 CPATH="${HOME}/.cpm/cpmlist/readme.md"
