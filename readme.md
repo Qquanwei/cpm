@@ -43,3 +43,4 @@
 * 安装helloworld : `cpm install helloworld`
 * 搜索helloworld : `cpm search helloworld`
 * 更新本地仓库列表 : `cpm update`
+* 卸载helloworld : `cpm remove helloworld`
