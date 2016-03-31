@@ -37,3 +37,9 @@
 * `update` 不需要参数，更新本地`cpmlist`仓库
 * `search` 需要一个参数，搜索含有该参数的软件库名称
 * `remove` 移除一个`c`库
+
+## 使用说明
+
+* 安装helloworld : `cpm install helloworld`
+* 搜索helloworld : `cpm search helloworld`
+* 更新本地仓库列表 : `cpm update`
