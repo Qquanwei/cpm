@@ -1,9 +1,8 @@
 #!/bin/bash
+#获取实际脚本路径
+SCRIPT_PATH=$(dirname $0)
 if [ $# -gt 0 ];then
-  ./cpm_${1}.sh $2
+  ${SCRIPT_PATH}/cpm_${1}.sh $2
 else
-  ./cpm_help.sh
+  ${SCRIPT_PATH}/cpm_help.sh
 fi
-
-
-
