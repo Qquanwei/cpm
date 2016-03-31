@@ -3,7 +3,6 @@
 SCRIPT_PATH=$(dirname $0)
 if [ -L $0 ];then
   SCRIPT_PATH=$(dirname $(readlink $0))
-  echo '符号链接'
 else
   SCRIPT_PATH=$(dirname $0)
 fi
