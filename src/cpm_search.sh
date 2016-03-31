@@ -7,10 +7,10 @@ function print_usag_and_exit(){
   echo '  $1 hellowold'
 }
 
-PATH="${HOME}/.cpm/cpmlist/readme.md"
+CPATH="${HOME}/.cpm/cpmlist/readme.md"
 
 if [ $# -gt 0 ];then
-  /usr/bin/grep $1 ${PATH}
+  grep $1 ${CPATH}
 else
   print_usag_and_exit $0
 fi
