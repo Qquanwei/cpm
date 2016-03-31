@@ -8,7 +8,7 @@ fi
 cd $CPM_PATH
 
 if [ ! -d "cpmlist" ];then
-  git clone git@github.com:Qquanwei/cpmlist.git
+  git clone https://github.com/Qquanwei/cpmlist
 else
   cd cpmlist
   git pull origin master
