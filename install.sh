@@ -1,5 +1,4 @@
 #!/bin/bash
-echo 安装cpm
 
 SRCPATH="$(dirname $0)/src"
 INSTALLPATH='/usr/local/share/cpm'
@@ -10,10 +9,12 @@ fi
 
 if [ ! -d "$INSTALLPATH" ];then
   mkdir $INSTALLPATH
-else
-  echo $INSTALLPATH 已经存在
 fi
 
 cp "${SRCPATH}"/* "$INSTALLPATH/"
 
-ln -s "$INSTALLPATH/cpm.sh" "/usr/local/bin/cpm"
+if [ ! -f "/usr/local/bin/cpm" ] ;then
+  ln -s "$INSTALLPATH/cpm.sh" "/usr/local/bin/cpm"
+fi
+
+echo '安装成功'
