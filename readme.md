@@ -44,3 +44,4 @@
 * 搜索helloworld : `cpm search helloworld`
 * 更新本地仓库列表 : `cpm update`
 * 卸载helloworld : `cpm remove helloworld`
+* 查看已安装的包: `cpm ls`
