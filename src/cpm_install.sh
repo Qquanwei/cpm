@@ -8,17 +8,19 @@ function print_usag_and_exit(){
   echo 'hi'
 }
 
-
 #记录安装包的信息到配置文件
 #$1 包名 $2 路径名称
 function record_to_config(){
   packname=$1
   giturl=$2
-  if [ -f "${INSTALL_PATH}/${CONFIG_NAME}" ];then
+  if [ ! -f "${INSTALL_PATH}/${CONFIG_NAME}" ];then
     echo '配置文件不存在'
     echo '创建配置文件 .cpm.config'
   fi
-  echo "${packname} ${giturl}" >> ${INSTALL_PATH}/${CONFIG_NAME}
+  ans=$(grep ${giturl} ${INSTALL_PATH}/${CONFIG_NAME})
+  if [ -z "$ans" ];then
+    echo "${packname} ${giturl}" >> ${INSTALL_PATH}/${CONFIG_NAME}
+  fi
 }
 
 #安装包
@@ -45,11 +47,10 @@ function install_by_name_and_url(){
 
 if [ $# -gt 0 ];then
   packname=$1
-  intputlength=${#packname}
-  success=0
   ("${SCRIPT_PATH}"/cpm_search.sh $packname | while read line;do
     #库名完全匹配
-    if [ "${line:0:${intputlength}}" = "$packname" ];then
+    scriptpacknam=$(echo ${line} | cut -d " " -f 1)
+    if [ "$scriptpacknam" = "$packname" ];then
       #获取git路径
       gitpath=$(echo $line|cut -d " " -f 2)
       install_by_name_and_url ${packname} ${gitpath}
@@ -77,3 +78,4 @@ else
     print_usag_and_exit $0
   fi
 fi
+
