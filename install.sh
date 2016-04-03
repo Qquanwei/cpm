@@ -17,4 +17,6 @@ if [ ! -f "/usr/local/bin/cpm" ] ;then
   ln -s "$INSTALLPATH/cpm.sh" "/usr/local/bin/cpm"
 fi
 
+${INSTALLPATH}/cpm.sh update
+
 echo '安装成功'
