@@ -35,3 +35,4 @@
 * 更新本地仓库列表 : `cpm update`
 * 卸载helloworld : `cpm remove helloworld`
 * 查看已安装的包: `cpm ls`
+* 查看无记录的包: `cpm autoclean`
