@@ -36,3 +36,7 @@
 * 卸载helloworld : `cpm remove helloworld`
 * 查看已安装的包: `cpm ls`
 * 查看无记录的包: `cpm autoclean`
+
+## 事实上
+
+* 它不仅仅可以做c库管理器
