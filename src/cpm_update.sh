@@ -11,5 +11,5 @@ if [ ! -d "cpmlist" ];then
   git clone https://github.com/Qquanwei/cpmlist
 else
   cd cpmlist
-  git pull origin master
+  git pull
 fi

@@ -41,7 +41,7 @@ function install_by_name_and_url(){
     echo '安装成功'
     echo "cinclude->${packname}"
     #如果存在readme,则显示readme.md
-    cat ${INSTALL_PATH}/cinclude/${packname}/readme.md 2>/dev/null
+    find "${INSTALL_PATH}/cinclude/${packname}" -maxdepth 1 -iname "readme.md" -exec less {} \; 
   fi
 }
 
